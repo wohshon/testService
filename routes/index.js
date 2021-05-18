@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Express' });
      var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress || null;
    console.log(ip);
-  res.status(200).send("OK");
+  res.status(200).send("OK: "+ip);
 });
 
 module.exports = router;
